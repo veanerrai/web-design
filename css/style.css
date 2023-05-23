@@ -1,5 +1,7 @@
  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
 html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
 }
@@ -28,7 +30,7 @@ body{
     left: 0;
     width: 100%;
 }
-.header_wrapper{/* стили для контейнера в "обертке" */
+.header__wrapper{/* стили для контейнера в "обертке" */
     display: flex;
     flex-wrap: wrap;/* отвечает за перенос контента */
     align-items: flex-end;
@@ -37,7 +39,7 @@ body{
     padding-bottom: 30px;
     gap: 15px;
 }
-.header_list{
+.header__list{
     display: flex;
     flex-wrap: wrap;
     column-gap: 30px;
@@ -45,37 +47,39 @@ body{
     align-items: center;
 }
 @media(max-width:500px){
-    .header_wrapper{
+    .header__wrapper{
         flex-direction: column;
         padding-top: 30px;
         padding-bottom: 30px;
         gap: 10px;
     }
 }
-.header_item{/* настраиваем оступы между пункатим навигационного меню */
+.header__item{/* настраиваем оступы между пункатим навигационного меню */
     margin-right: 45px;
 }
-.header_item:last-child{
+.header__item:last-child{
     margin-right: 0px;
 }
-.header_link{/* стиль пунктов навигационного меню */
+.header__link{/* стиль пунктов навигационного меню */
     font-family: 'Inter', sans-serif;
     font-size: 17px;
     line-height: 21px;
     color: #000000;
     text-decoration: none;
 }
-.header_link:hover, .header_link:focus, .header_link:active
+.header__link:hover, .header__link:focus, .header__link:active
 {
 opacity: .6;/* прозрачность 60%*/
 }/* стиль для взаимодействия с ссылками*/
+
+/* ----------------------------- */ 
 
 /* Стили 1-ого экрана начало*/
 .intro{
     padding-top: 190px;
     margin-bottom: 110px;
 }
-.intro_title{ /* стиль для заголовка 1 экрана*/
+.intro__title{ /* стиль для заголовка 1 экрана*/
     font-family: 'Inter', sans-serif;
     font-weight: 700;
     font-size: 124px;
@@ -84,7 +88,7 @@ opacity: .6;/* прозрачность 60%*/
     margin-bottom: 60px;
 }
 
-.intro_subtitle{ /* стиль для подзаголовка*/
+.intro__subtitle{ /* стиль для подзаголовка*/
     font-family: 'Inter', sans-serif;
     font-weight: 500;
     font-size: 30px;
@@ -92,84 +96,85 @@ opacity: .6;/* прозрачность 60%*/
     color: #535353;
     margin-bottom: 20px;
 }
-.intro_social{ /* стиль для ссылок на соцсети*/
+.intro__social{ /* стиль для ссылок на соцсети*/
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
-.intro_social_list{
+.intro__social__list{
     list-style-type:  none;
 }
-.intro_social_item{
+.intro__social__item{
     margin-right: 20px;
     list-style-type:  none;
 }
-.intro_social_item:last-child{
+.intro__social__item:last-child{
     margin-right: 0px;
 }
-.intro_social_link{
+.intro__social__link{
     text-decoration: none;
 
 }
-.intro_social_link:hover, .header_link:focus, .header_link:active{ 
+.intro__social__link:hover, .header__link:focus, .header__link:active{ 
     opacity: .6;/* прозрачность 60%*/
-}   /* стиль для взаимодействия с ссылками*/
+}  
 
 .colortext{
     color: #AEE2FF;
 }
 @media (max-width: 1024px) {
-    .intro_title {
+    .intro__title {
         font-size: 96px;
         line-height: 120px;
     }
-    .intro_subtitle {
+    .intro__subtitle {
         font-size: 24px;
         line-height: 30px;
     }
 }
 
 @media (max-width: 768px) {
-    .intro_title {
+    .intro__title {
         font-size: 72px;
         line-height: 90px;
     }
-    .intro_subtitle {
+    .intro__subtitle {
         font-size: 18px;
         line-height: 24px;
     }
 }
 
 @media (max-width: 480px) {
-    .intro_title {
+    .intro__title {
         font-size: 48px;
         line-height: 60px;
     }
-    .intro_subtitle {
+    .intro__subtitle {
         font-size: 14px;
         line-height: 18px;
     }
 }
+/* стили 1-ого экрана конец*/
+
+/* ----------------------------- */ 
 
 /* стили 2-ого экрана philosophy начало*/
 .philosophy{
    margin-bottom: 120px;
 }
-.philosophy_card{ /* флекс для карточки*/
+.philosophy__card{ /* флекс для карточки*/
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 0px;
 }
-.philosophy_item1{
+.philosophy__item1{
    max-width: 610px;
    padding-bottom: 40px;
 }
-.philosophy_item2{
-    max-width:100%;
-}
-.philosophy_title{ /* стиль для стиль для заголовка 2 экрана*/
+
+.philosophy__title{ /* стиль для стиль для заголовка 2 экрана*/
     font-family: 'Inter', sans-serif;
     font-weight: 700;
     font-size: 64px;
@@ -177,7 +182,7 @@ opacity: .6;/* прозрачность 60%*/
     color: #000000;
     margin-bottom: 40px;
 }
-.philosophy_description{ /* стиль для абзаца второго экрана*/
+.philosophy__description{ /* стиль для абзаца второго экрана*/
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: 28px;
@@ -186,7 +191,7 @@ opacity: .6;/* прозрачность 60%*/
     margin-bottom: 60px;
     
 }
-.philosophy_link{ /* стиль кнопки*/
+.philosophy__link{ /* стиль кнопки*/
     box-sizing: border-box;
     padding: 18px 26px;
     gap: 10px;
@@ -197,8 +202,91 @@ opacity: .6;/* прозрачность 60%*/
     color: #9747FF;
     text-decoration: none;
 }
+@media (max-width: 1200px) {
+    .philosophy__title{ /* стиль для стиль для заголовка 2 экрана*/
+        font-family: 'Inter', sans-serif;
+        font-weight: 700;
+        font-size: 56px;
+        line-height: 66px;
+        color: #000000;
+        margin-bottom: 40px;
+    }
+    .philosophy__item1{
+        max-width: 500px;
+        padding-bottom: 40px;
+     }
+    
+    .philosophy__description{ /* стиль для абзаца второго экрана*/
+        font-family: 'Inter', sans-serif;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 30px;
+        color: #959595;
+        margin-bottom: 60px;
+    }
+
+     .philosophy__thumb{
+        width: 100%;
+    }
+}
+@media (max-width: 1080px) {
+    .philosophy__title{ /* стиль для стиль для заголовка 2 экрана*/
+        font-family: 'Inter', sans-serif;
+        font-weight: 700;
+        font-size: 56px;
+        line-height: 66px;
+        color: #000000;
+        margin-bottom: 40px;
+    }
+    .philosophy__item1{
+        max-width: 400px;
+        padding-bottom: 40px;
+     }
+    
+    .philosophy__description{ /* стиль для абзаца второго экрана*/
+        font-family: 'Inter', sans-serif;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 30px;
+        color: #959595;
+        margin-bottom: 60px;
+    }
+
+     .philosophy__thumb{
+        max-width: 100%;
+    }
+}
+@media screen and (max-width: 1023px) {
+    .philosophy__thumb {
+      display: none;
+    }
+    .philosophy__title{ /* стиль для стиль для заголовка 2 экрана*/
+        font-family: 'Inter', sans-serif;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 62px;
+        color: #000000;
+        margin-bottom: 40px;
+    }
+    .philosophy__item1{
+        max-width: 800px;
+        padding-bottom: 40px;
+     }
+     .philosophy__description{ /* стиль для абзаца второго экрана*/
+        font-family: 'Inter', sans-serif;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 26px;
+        color: #959595;
+        margin-bottom: 60px;
+    }
+  }
+  .philosophy__link:hover, .philosophy__link:focus, .philosophy__link:active{
+    opacity: 0.7;
+  }
 /* стили 2-ого экрана philosophy конец*/
 
+/* ----------------------------- */ 
 
 /* стили 3-го экрана начало*/
 .wrapper-fullsreen{
@@ -213,7 +301,7 @@ opacity: .6;/* прозрачность 60%*/
     display: flex;
     text-align: center;
 }
-.fullscreen_body{
+.fullscreen__body{
     flex: 1 1 auto;
     width: 100%;
     max-width: 1000px;
@@ -223,8 +311,7 @@ opacity: .6;/* прозрачность 60%*/
     flex-direction: column;
     justify-content: center;
 }
-
-.fullscreen_link{
+.fullscreen__link{
     font-family: 'Inter';
     font-style: normal;
     font-weight: 600;
@@ -233,8 +320,14 @@ opacity: .6;/* прозрачность 60%*/
     color: #ffffff;
     text-decoration: underline;
 }
+.fullscreen__link:hover, .fullscreen__link:focus, .fullscreen__link:active{
+    opacity: 0.7;
+  }
 /* стили 3-го экрана конец*/
 
+/* ----------------------------- */ 
+      
+/* стили проекты начало*/
 .works{
     padding-top: 100px;
 }
@@ -244,6 +337,7 @@ opacity: .6;/* прозрачность 60%*/
     flex-wrap: wrap;
     row-gap: 50px; 
     column-gap: 5%;
+    padding-bottom: 50px;
 } 
     
  .project { 
@@ -260,7 +354,7 @@ opacity: .6;/* прозрачность 60%*/
  .project a{
     text-decoration: none;
  }   
- .projects_title{
+ .projects__title{
     font-family: 'Inter', sans-serif;
     font-weight: 700;
     font-size: 64px;
@@ -278,47 +372,39 @@ opacity: .6;/* прозрачность 60%*/
     text-decoration: none;
     text-align: center; 
 } 
-.project-details{ 
-    margin: 0 auto; 
-    max-width: 865px; 
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    text-align: center; 
-} 
-.project-details__cover{ 
-    max-width: 100%; 
-    margin-bottom: 40px;     
-    filter: drop-shadow(0px 5px 35px rgba(0, 0, 0, 0.25)); 
-    border-radius: 10px; 
-}   
-.project-details__desc{ 
-    margin-bottom: 30px; 
-    font-size: 24px; 
-    font-weight: 700; 
-    line-height: 1.3;         
-} 
-.project__title:hover, .header_link:focus, .header_link:active{ 
+.project__title:hover, .project__title:focus, .project__title:active{ 
     color: #5fa3e4;
 }   /* стиль для взаимодействия с ссылками*/
-.project:hover, .header_link:focus, .header_link:active{ 
+.project:hover, .project:focus, .project:active{ 
     max-width: 390px; 
     background-color: #FFF; 
     box-shadow: 0px 5px 15px rgba(111, 111, 111, 0.25); 
     border-radius: 10px; 
 }   /* стиль для взаимодействия с ссылками*/
+/* стили проекты конец*/
+
 /* ----------------------------- */ 
       
-      
 /* стили слайдер начало*/
+.slides{
+    padding-top: 50px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
 .slider {
     position: relative;
     max-width: 1300px;
     height: 690px;
     margin: 0 auto;
     overflow: hidden;
-    margin-bottom: 100px;
   }
+.slider__title{
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 80px;
+    color: #000000;
+}
   .slider img {
     position: absolute;
     top: 0;
@@ -394,15 +480,16 @@ opacity: .6;/* прозрачность 60%*/
         overflow: hidden;
     }
 }
-  
 /* стили слайдер конец */
+
+/* ----------------------------- */ 
 
 /* стили футера начало*/
 .footer{
     padding-bottom: 35px;
     border-top: 1px solid #E8E7EA;
 }
-.footer_container{
+.footer__container{
     display: flex;
     flex-wrap: wrap;/* отвечает за перенос контента */
     justify-content: space-between; /*растягиваем эл-ы по контейнеру */
@@ -410,17 +497,17 @@ opacity: .6;/* прозрачность 60%*/
     padding-top: 30px;
     gap: 15px;
 }
-.footer_list{
+.footer__list{
     display: flex;
     flex-wrap: wrap;
 }
-.footer_item{
+.footer__item{
     margin-right: 45px;
 }
-.footer_item:last-child{
+.footer__item:last-child{
     margin-right: 0px;
 }
-.footer_link{
+.footer__link{
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -429,33 +516,33 @@ opacity: .6;/* прозрачность 60%*/
     text-decoration: none;
     color: #939395;
 }
-.footer_link:hover, .header_link:focus, .header_link:active{
+.footer__link:hover, .footer__link:focus, .footer__link:active{
     opacity: .6;/* прозрачность 60%*/
 }   /* стиль для взаимодействия с ссылками*/
-.footer_social{
+.footer__social{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
-.social_list{
+.social__list{
     list-style-type:  none;
 }
-.social_item{
+.social__item{
     margin-right: 10px;
     list-style-type:  none;
 }
-.social_item:last-child{
+.social__item:last-child{
     margin-right: 0px;
 }
-.social_link{
+.social__link{
     text-decoration: none;
 
 }
-.social_link:hover, .header_link:focus, .header_link:active{ 
+.social__link:hover, .social__link:focus, .social__link:active{ 
     opacity: .6;/* прозрачность 60%*/
 }   /* стиль для взаимодействия с ссылками*/
 @media(max-width:500px){
-    .footer_container{
+    .footer__container{
         flex-direction: column;
         padding-top: 30px;
         padding-bottom: 30px;

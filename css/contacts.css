@@ -28,7 +28,7 @@ body{
     left: 0;
     width: 100%;
 }
-.header_wrapper{/* стили для контейнера в "обертке" */
+.header__wrapper{/* стили для контейнера в "обертке" */
     display: flex;
     flex-wrap: wrap;/* отвечает за перенос контента */
     align-items: flex-end;
@@ -37,7 +37,7 @@ body{
     padding-bottom: 30px;
     gap: 15px;
 }
-.header_list{
+.header__list{
     display: flex;
     flex-wrap: wrap;
     column-gap: 30px;
@@ -45,32 +45,33 @@ body{
     align-items: center;
 }
 @media(max-width:500px){
-    .header_wrapper{
+    .header__wrapper{
         flex-direction: column;
         padding-top: 30px;
         padding-bottom: 30px;
         gap: 10px;
     }
 }
-.header_item{/* настраиваем оступы между пункатим навигационного меню */
+.header__item{/* настраиваем оступы между пункатим навигационного меню */
     margin-right: 45px;
 }
-.header_item:last-child{
+.header__item:last-child{
     margin-right: 0px;
 }
-.header_link{/* стиль пунктов навигационного меню */
+.header__link{/* стиль пунктов навигационного меню */
     font-family: 'Inter', sans-serif;
     font-size: 17px;
     line-height: 21px;
     color: #000000;
     text-decoration: none;
 }
-.header_link:hover, .header_link:focus, .header_link:active
+.header__link:hover, .header__link:focus, .header__link:active
 {
 opacity: .6;/* прозрачность 60%*/
 }/* стиль для взаимодействия с ссылками*/
 
-
+/* ----------------------------- */ 
+      
 main{
     max-width: 1300px; /* ширина 1060 пикс для контента*/
     margin: 0 auto;/* выравнивание внутри родителя по центру */
@@ -82,7 +83,7 @@ main{
     padding-top: 190px;
     margin-bottom: 110px;
 }
-.intro_title{ /* стиль для заголовка 1 экрана*/
+.intro__title{ /* стиль для заголовка 1 экрана*/
     font-family: 'Inter', sans-serif;
     font-weight: 700;
     font-size: 120px;
@@ -90,7 +91,7 @@ main{
     color: black;
     margin-bottom: 60px;
 }
-.intro_subtitle{ /* стиль для подзаголовка*/
+.intro__subtitle{ /* стиль для подзаголовка*/
     font-family: 'Inter', sans-serif;
     font-weight: 500;
     font-size: 30px;
@@ -99,33 +100,33 @@ main{
     margin-bottom: 20px;
 }
 @media (max-width: 1024px) {
-    .intro_title {
+    .intro__title {
         font-size: 96px;
         line-height: 120px;
     }
-    .intro_subtitle {
+    .intro__subtitle {
         font-size: 24px;
         line-height: 30px;
     }
 }
 
 @media (max-width: 768px) {
-    .intro_title {
+    .intro__title {
         font-size: 72px;
         line-height: 90px;
     }
-    .intro_subtitle {
+    .intro__subtitle {
         font-size: 18px;
         line-height: 24px;
     }
 }
 
 @media (max-width: 480px) {
-    .intro_title {
+    .intro__title {
         font-size: 48px;
         line-height: 60px;
     }
-    .intro_subtitle {
+    .intro__subtitle {
         font-size: 14px;
         line-height: 18px;
     }
@@ -135,26 +136,26 @@ main{
 /* ----------------------------- */
 
 /* стиль ссылок начало */
-.intro_social{ /* стиль для ссылок на соцсети*/
+.intro__social{ /* стиль для ссылок на соцсети*/
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
-.intro_social_list{
+.intro__social__list{
     list-style-type:  none;
 }
-.intro_social_item{
+.intro__social__item{
     margin-right: 20px;
     list-style-type:  none;
 }
-.intro_social_item:last-child{
+.intro__social__item:last-child{
     margin-right: 0px;
 }
-.intro_social_link{
+.intro__social__link{
     text-decoration: none;
 
 }
-.intro_social_link:hover, .header_link:focus, .header_link:active{ 
+.intro__social__link:hover, .intro__social__link:focus, .intro__social__link:active{ 
     opacity: .6;/* прозрачность 60%*/
 }   /* стиль для взаимодействия с ссылками*/
 .colortext{
@@ -167,8 +168,7 @@ main{
 
 /* ----------------------------- */
 
-/* стиль второго экрана начало */
-
+/* стили для формы начало */
 .feedback{
     display: flex;
     align-items: center;
@@ -180,14 +180,14 @@ main{
     width: 50%;
     margin-right: 20px;
 }
-.h3_sidetext{
+.h3__sidetext{
     font-size: 2rem;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     padding-bottom: 10px;
     color: #939395;
 }
-.h1_sidetext{
+.h1__sidetext{
     font-family: 'Inter', sans-serif;
     font-weight: 700;
     font-size: 124px;
@@ -196,7 +196,6 @@ main{
     margin-bottom: 60px;
 }
 
-/* стили для формы начало */
 .forma {
   width: 50%;
   background-color: #fff;
@@ -254,9 +253,27 @@ form button[type="submit"]:hover {
   background-color: #64c5ee;
 }
 /* стили для формы конец */
-/* стиль второго экрана конец */
+/* 
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
 
+.marquee p {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 15s linear infinite;
+}
 
+@keyframes marquee {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-100%, 0);
+    }
+} */
 /* ----------------------------- */ 
 /* стили карта начало */
 .map{
@@ -272,7 +289,7 @@ form button[type="submit"]:hover {
     padding-bottom: 35px;
     border-top: 1px solid #E8E7EA;
 }
-.footer_container{
+.footer__container{
     display: flex;
     flex-wrap: wrap;/* отвечает за перенос контента */
     justify-content: space-between; /*растягиваем эл-ы по контейнеру */
@@ -280,17 +297,17 @@ form button[type="submit"]:hover {
     padding-top: 30px;
     gap: 15px;
 }
-.footer_list{
+.footer__list{
     display: flex;
     flex-wrap: wrap;
 }
-.footer_item{
+.footer__item{
     margin-right: 45px;
 }
-.footer_item:last-child{
+.footer__item:last-child{
     margin-right: 0px;
 }
-.footer_link{
+.footer__link{
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -299,33 +316,33 @@ form button[type="submit"]:hover {
     text-decoration: none;
     color: #939395;
 }
-.footer_link:hover, .header_link:focus, .header_link:active{
+.footer__link:hover, .footer__link:focus, .footer__link:active{
     opacity: .6;/* прозрачность 60%*/
 }   /* стиль для взаимодействия с ссылками*/
-.footer_social{
+.footer__social{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
-.social_list{
+.social__list{
     list-style-type:  none;
 }
-.social_item{
+.social__item{
     margin-right: 10px;
     list-style-type:  none;
 }
-.social_item:last-child{
+.social__item:last-child{
     margin-right: 0px;
 }
-.social_link{
+.social__link{
     text-decoration: none;
 
 }
-.social_link:hover, .header_link:focus, .header_link:active{ 
+.social__link:hover,.social__link:focus, .social__link:active{ 
     opacity: .6;/* прозрачность 60%*/
 }   /* стиль для взаимодействия с ссылками*/
 @media(max-width:500px){
-    .footer_container{
+    .footer__container{
         flex-direction: column;
         padding-top: 30px;
         padding-bottom: 30px;
